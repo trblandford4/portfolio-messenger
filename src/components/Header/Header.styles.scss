@@ -1,19 +1,17 @@
-$dark-header-background-color: #242526;
-$their-message-background: #0084ff;
-$dark-header-divider: #3e4042;
+@import "../../styles/colors.scss";
 
 .header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  background-color: $dark-header-background-color;
-  border-bottom: 1px solid $dark-header-divider;
+  background-color: $dark-header-background;
+  border-bottom: 1px solid $divider;
   margin-bottom: 12px;
   padding: 12px 5%;
 
   .icon {
-    color: #0078ff;
+    color: $fb-blue;
     font-size: 28px;
     margin: 0 24px 0 0;
   }
@@ -31,7 +29,7 @@ $dark-header-divider: #3e4042;
     align-items: flex-start;
     justify-content: space-around;
     margin: 0 12px;
-    color: #f6f6f6;
+    color: $light-font;
 
     .title {
       font-size: 24px;
@@ -48,7 +46,7 @@ $dark-header-divider: #3e4042;
     margin-left: auto;
 
     .icon {
-      color: $their-message-background;
+      color: $fb-blue;
       font-size: 28px;
       margin: 0 16px;
     }

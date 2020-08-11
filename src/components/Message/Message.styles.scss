@@ -1,8 +1,4 @@
-$my-message-background: #373737;
-$their-message-background: #0084ff;
-$dark-background: #18191a;
-
-$light-font-color: #f6f6f6;
+@import "../../styles/colors.scss";
 
 .message {
   display: flex;
@@ -12,8 +8,8 @@ $light-font-color: #f6f6f6;
   animation-delay: 1.5s;
 
   .chat-bubble {
-    color: $light-font-color;
-    background-color: $my-message-background;
+    color: $light-font;
+    background-color: $received-message-background;
     font-size: 28px;
     display: flex;
     border-radius: 40px;
@@ -23,28 +19,28 @@ $light-font-color: #f6f6f6;
     width: fit-content;
 
     &.sent {
-      background-color: $their-message-background;
-      color: $light-font-color;
-      border: 2px solid $their-message-background;
+      background-color: $fb-blue;
+      color: $light-font;
+      border: 2px solid $fb-blue;
       margin-left: auto;
     }
 
     &.action-btn {
       background-color: $dark-background;
-      color: $their-message-background;
-      border: 2px solid $their-message-background;
+      color: $fb-blue;
+      border: 2px solid $fb-blue;
       margin: 0;
       justify-content: flex-end;
 
       &:hover {
-        background-color: $their-message-background;
+        background-color: $fb-blue;
         color: white;
         cursor: pointer;
       }
     }
 
     &.received {
-      background-color: $my-message-background;
+      background-color: $received-message-background;
     }
   }
 }
