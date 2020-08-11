@@ -7,15 +7,14 @@ import {
   faArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
 
-import avatar from "../../assets/rayb.png";
-
 import "./Header.styles.scss";
+import Avatar from "../Avatar/Avatar";
 
 const Header = () => {
   return (
     <div className="header">
       <FontAwesomeIcon icon={faArrowLeft} className="icon" />
-      <img src={avatar} alt="Ray Blandford" className="avatar" />
+      <Avatar size={50} />
       <div className="info">
         <h1 className="title">Ray Blandford</h1>
         <h2 className="description">Front End Engineer</h2>

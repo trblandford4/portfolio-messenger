@@ -1,9 +1,14 @@
+$dark-header-background-color: #242526;
+$their-message-background: #0084ff;
+$dark-header-divider: #3e4042;
+
 .header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  border-bottom: 1.5px solid #202020;
+  background-color: $dark-header-background-color;
+  border-bottom: 1px solid $dark-header-divider;
   margin-bottom: 12px;
   padding: 12px 5%;
 
@@ -43,9 +48,9 @@
     margin-left: auto;
 
     .icon {
-      color: #0078ff;
+      color: $their-message-background;
       font-size: 28px;
-      margin: 0 24px;
+      margin: 0 16px;
     }
   }
 }

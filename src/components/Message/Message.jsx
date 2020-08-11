@@ -3,6 +3,7 @@ import React, { useEffect, useContext } from "react";
 import "./Message.styles.scss";
 import MessageLoading from "../MessageLoading/MessageLoading";
 import { MessagesContext } from "../../providers/Messages.provider";
+import Avatar from "../Avatar/Avatar";
 
 const Message = ({ message, toggleMessageLoaded }) => {
   const { text, loaded, sender, type, id, delay } = message;
@@ -28,13 +29,15 @@ const Message = ({ message, toggleMessageLoaded }) => {
   }, []);
 
   return (
-    <div
-      className={`${sender === "user" ? "sent" : "received"} ${
-        type === "action" ? "action-btn" : ""
-      } chat-bubble`}
-      style={{ animationDelay: `${delay}s` }}
-    >
-      {loaded ? text : <MessageLoading />}
+    <div className="message" style={{ animationDelay: `${delay}s` }}>
+      {sender !== "user" && <Avatar size={20} />}
+      <div
+        className={`${sender === "user" ? "sent" : "received"} ${
+          type === "action" ? "action-btn" : ""
+        } chat-bubble`}
+      >
+        {loaded ? text : <MessageLoading />}
+      </div>
     </div>
   );
 };
