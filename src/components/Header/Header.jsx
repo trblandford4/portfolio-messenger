@@ -1,5 +1,5 @@
-import React from "react";
-import { Badge } from "antd";
+import React, { useState } from "react";
+import { Badge, Tooltip } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
@@ -10,8 +10,13 @@ import {
 
 import "./Header.styles.scss";
 import Avatar from "../Avatar/Avatar";
+import InfoDrawer from "../InfoDrawer/InfoDrawer";
 
 const Header = () => {
+  const [visible, setVisible] = useState(false);
+
+  const toggleVisible = () => setVisible((prevVisible) => !prevVisible);
+
   return (
     <div className="header">
       <FontAwesomeIcon icon={faArrowLeft} className="icon" />
@@ -28,12 +33,23 @@ const Header = () => {
         <h2 className="description">Active on VS Code</h2>
       </div>
       <div className="actions">
-        <a href="mailto:trblandford4@gmail.com">
-          <FontAwesomeIcon icon={faEnvelope} className="icon" />
-        </a>
-        <FontAwesomeIcon icon={faFileDownload} className="icon" />
-        <FontAwesomeIcon icon={faInfoCircle} className="icon" />
+        <Tooltip placement="bottom" title="Email Me">
+          <a href="mailto:trblandford4@gmail.com">
+            <FontAwesomeIcon icon={faEnvelope} className="icon" />
+          </a>
+        </Tooltip>
+        <Tooltip placement="bottom" title="Download Resume">
+          <FontAwesomeIcon icon={faFileDownload} className="icon" />
+        </Tooltip>
+        <Tooltip placement="bottom" title="More Info">
+          <FontAwesomeIcon
+            icon={faInfoCircle}
+            className="icon"
+            onClick={toggleVisible}
+          />
+        </Tooltip>
       </div>
+      <InfoDrawer visible={visible} toggleVisible={toggleVisible} />
     </div>
   );
 };
