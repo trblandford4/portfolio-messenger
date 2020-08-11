@@ -8,15 +8,15 @@
   animation-delay: 1.5s;
 
   .chat-bubble {
+    display: flex;
+    align-items: flex-start;
+    width: fit-content;
     color: $light-font;
     background-color: $received-message-background;
+    border-radius: 1.3em;
     font-size: 28px;
-    display: flex;
-    border-radius: 40px;
     padding: 8px 15px;
-    align-items: flex-start;
     margin: 3px 0 0 3px;
-    width: fit-content;
 
     &.sent {
       background-color: $fb-blue;
