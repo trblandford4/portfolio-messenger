@@ -17,7 +17,7 @@ const Header = () => {
       <Avatar size={50} />
       <div className="info">
         <h1 className="title">Ray Blandford</h1>
-        <h2 className="description">Front End Engineer</h2>
+        <h2 className="description">Active on VS Code</h2>
       </div>
       <div className="actions">
         <a href="mailto:trblandford4@gmail.com">
