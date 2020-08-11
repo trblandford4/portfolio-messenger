@@ -11,9 +11,9 @@ export const INITIAL_MESSAGES = [
     id: 3,
     text: "I'm currently accepting freelance work",
     loaded: false,
-    delay: 4,
+    delay: 3,
   },
-  { id: 4, text: "👀 R.", loaded: false, delay: 5 },
+  { id: 4, text: "👀 R.", loaded: false, delay: 4 },
 ];
 
 export const ABOUT_REPLIES = [
@@ -27,8 +27,4 @@ export const ABOUT_REPLIES = [
   },
 ];
 
-export const INITIAL_ACTIONS = [
-  { id: 0, type: "About" },
-  { id: 2, type: "Resume" },
-  { id: 3, type: "Contact" },
-];
+export const INITIAL_ACTIONS = [{ id: 0, type: "About" }];
