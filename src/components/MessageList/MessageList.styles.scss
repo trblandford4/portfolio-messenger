@@ -1,0 +1,11 @@
+.message-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5%;
+}
+
+.reply-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
