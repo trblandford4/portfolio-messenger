@@ -10,13 +10,13 @@ const Message = ({ message, toggleMessageLoaded }) => {
 
   useEffect(() => {
     const typingDelay = setTimeout(() => {
-      id !== 0 && type !== "action"
-        ? toggleMessageLoaded(id)
-        : console.log("first text");
+      if (id !== 0 && type !== "action") {
+        toggleMessageLoaded(id);
+      }
     }, 1000 * delay + 1000);
 
     return () => clearTimeout(typingDelay);
-  }, []);
+  }, [id, delay, type]);
 
   useEffect(() => {
     const typingDelay = setTimeout(() => {
@@ -26,10 +26,6 @@ const Message = ({ message, toggleMessageLoaded }) => {
     }, delay * 1000 + 2000);
     return () => clearTimeout(typingDelay);
   }, []);
-
-  console.log(text, loaded);
-
-  console.log(type === "action");
 
   return (
     <div

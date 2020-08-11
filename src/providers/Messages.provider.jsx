@@ -1,6 +1,10 @@
 import React, { createContext, useState, useEffect } from "react";
 
-import { INITIAL_MESSAGES, INITIAL_ACTIONS } from "./messageData";
+import {
+  INITIAL_MESSAGES,
+  INITIAL_ACTIONS,
+  ABOUT_REPLIES,
+} from "./messageData";
 
 export const MessagesContext = createContext({
   messages: [],
@@ -8,6 +12,7 @@ export const MessagesContext = createContext({
   actions: [],
   showActions: false,
   toggleShowActions: () => {},
+  sendMessage: () => {},
 });
 
 const MessagesProvider = ({ children }) => {
@@ -17,7 +22,10 @@ const MessagesProvider = ({ children }) => {
   const [showActions, setShowActions] = useState(false);
 
   useEffect(() => {
-    console.log("messages updated to: ", messages);
+    if (messages[messages.length - 1].sender === "user") {
+      setMessages((prevMessages) => [...prevMessages, ...ABOUT_REPLIES]);
+      toggleShowActions();
+    }
   }, [messages]);
 
   const toggleLoaded = (messageId) => {
@@ -32,6 +40,10 @@ const MessagesProvider = ({ children }) => {
     );
   };
 
+  const sendMessage = (message) => {
+    setMessages((prevMessages) => [...prevMessages, message]);
+  };
+
   const toggleShowActions = () => {
     setShowActions((prevShowActions) => !prevShowActions);
   };
@@ -44,6 +56,7 @@ const MessagesProvider = ({ children }) => {
         actions,
         showActions,
         toggleShowActions,
+        sendMessage,
       }}
     >
       {children}
