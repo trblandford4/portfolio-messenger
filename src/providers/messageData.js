@@ -16,10 +16,18 @@ export const MESSAGES = {
     },
     { id: 4, text: "👀 R.", loaded: false, delay: 4 },
   ],
-  skills: [],
-  projects: [],
-  contact: [],
-  dad: [],
+  skills: [
+    { id: 10, text: "React", loaded: false, delay: 0 },
+    { id: 11, text: "Redux", loaded: false, delay: 1 },
+    { id: 12, text: "TypeScript", loaded: false, delay: 2 },
+    { id: 13, text: "& I'm learning GraphQL", loaded: false, delay: 3 },
+  ],
+  projects: [
+    { id: 20, text: "Check these out:", loaded: false, delay: 0 },
+    { id: 21, text: "Qualcat", loaded: false, delay: 1 },
+    { id: 22, text: "CRWN Clothing", loaded: false, delay: 2 },
+    { id: 23, text: "This site", loaded: false, delay: 3 },
+  ],
 };
 
-export const ACTIONS = ["intro", "skills", "projects", "contact", "dad"];
+export const ACTIONS = ["skills", "projects", "contact"];

@@ -6,6 +6,7 @@ import Message from "../Message/Message";
 import { MessagesContext } from "../../providers/Messages.provider";
 import ReplyAction from "../ReplyAction/ReplyAction";
 import ContactDrawer from "../ContactDrawer/ContactDrawer";
+import AnimatedMessages from "../AnimatedMessages/AnimatedMessages";
 
 var currentTime = new Date();
 
@@ -13,7 +14,7 @@ const MessageList = () => {
   const [visible, setVisible] = useState(false);
   const toggleVisible = () => setVisible((prevVisible) => !prevVisible);
 
-  const { messages, toggleLoaded, actions, showActions } = useContext(
+  const { activeMessages, toggleLoaded, actions, showActions } = useContext(
     MessagesContext
   );
 
@@ -22,13 +23,7 @@ const MessageList = () => {
       <div className="message-heading">
         <h1 className="message-time">{currentTime.toLocaleString()}</h1>
       </div>
-      {messages.map((message, idx) => (
-        <Message
-          key={message.id}
-          message={message}
-          toggleMessageLoaded={toggleLoaded}
-        />
-      ))}
+      <AnimatedMessages messages={activeMessages} />
       {showActions && (
         <div className="reply-actions">
           {actions.map((action) => (

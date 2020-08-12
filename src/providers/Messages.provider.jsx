@@ -3,7 +3,7 @@ import React, { createContext, useState, useEffect } from "react";
 import { MESSAGES, ACTIONS } from "./messageData";
 
 export const MessagesContext = createContext({
-  messages: [],
+  activeMessages: [],
   toggleLoaded: () => {},
   actions: [],
   showActions: false,
@@ -12,13 +12,13 @@ export const MessagesContext = createContext({
 });
 
 const MessagesProvider = ({ children }) => {
-  const [messages, setMessages] = useState(MESSAGES.intro);
+  const [activeMessages, setActiveMessages] = useState(MESSAGES.intro);
   // eslint-disable-next-line no-unused-vars
   const [actions, setActions] = useState(ACTIONS);
   const [showActions, setShowActions] = useState(false);
 
   const toggleLoaded = (messageId) => {
-    setMessages((prevMessages) =>
+    setActiveMessages((prevMessages) =>
       prevMessages.map((message) => {
         if (message.id === messageId) {
           return { ...message, loaded: !message.loaded };
@@ -29,8 +29,24 @@ const MessagesProvider = ({ children }) => {
     );
   };
 
-  const sendMessage = (message) => {
-    setMessages((prevMessages) => [...prevMessages, message]);
+  const sendMessage = (action) => {
+    toggleShowActions();
+    setActions((prevActions) =>
+      prevActions.filter((currAction) => currAction !== action)
+    );
+    const sentMessage = {
+      id: activeMessages[activeMessages.length - 1].id++,
+      text: action,
+      loaded: false,
+      sender: "user",
+      type: "msg",
+    };
+    console.log(sentMessage);
+    setActiveMessages((prevMessages) => [
+      ...prevMessages,
+      sentMessage,
+      ...MESSAGES[action],
+    ]);
   };
 
   const toggleShowActions = () => {
@@ -40,7 +56,7 @@ const MessagesProvider = ({ children }) => {
   return (
     <MessagesContext.Provider
       value={{
-        messages,
+        activeMessages,
         toggleLoaded,
         actions,
         showActions,

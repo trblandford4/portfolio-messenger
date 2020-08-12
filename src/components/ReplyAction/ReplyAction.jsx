@@ -12,25 +12,16 @@ const ReplyAction = ({ action, toggleContactDrawer }) => {
     type: "action",
   };
 
-  const { messages, toggleShowActions, sendMessage } = useContext(
-    MessagesContext
-  );
+  const { sendMessage } = useContext(MessagesContext);
 
-  const handleClick = (e) => {
+  const handleClick = () => {
     if (action === "contact") {
       toggleContactDrawer();
       return;
     }
-    const message = {
-      id: messages.length,
-      text: action,
-      loaded: false,
-      sender: "user",
-      type: "msg",
-    };
-    toggleShowActions();
-    sendMessage(message);
+    sendMessage(action);
   };
+
   return (
     <button className="reply-action" onClick={handleClick}>
       <Message message={message} />

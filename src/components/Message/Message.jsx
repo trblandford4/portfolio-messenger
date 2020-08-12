@@ -5,26 +5,17 @@ import MessageLoading from "../MessageLoading/MessageLoading";
 import { MessagesContext } from "../../providers/Messages.provider";
 import Avatar from "../Avatar/Avatar";
 
-const Message = ({ message, toggleMessageLoaded }) => {
+const Message = ({ message }) => {
   const { text, loaded, sender, type, id, delay } = message;
-  const { toggleShowActions } = useContext(MessagesContext);
+  const { toggleLoaded } = useContext(MessagesContext);
 
   useEffect(() => {
     const typingDelay = setTimeout(() => {
       if (id !== 0 && type !== "action") {
-        toggleMessageLoaded(id);
+        toggleLoaded(id);
       }
     }, 1000 * delay + 1000);
 
-    return () => clearTimeout(typingDelay);
-  }, [id, delay, type]);
-
-  useEffect(() => {
-    const typingDelay = setTimeout(() => {
-      if (id === 4) {
-        toggleShowActions();
-      }
-    }, delay * 1000 + 2000);
     return () => clearTimeout(typingDelay);
   }, []);
 

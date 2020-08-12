@@ -3,9 +3,6 @@
 .message {
   display: flex;
   align-items: flex-end;
-  transform: translateX(-180%);
-  animation: slide 0.2s forwards;
-  animation-delay: 1.5s;
 
   .chat-bubble {
     display: flex;
@@ -42,11 +39,5 @@
     &.received {
       background-color: $received-message-background;
     }
-  }
-}
-
-@keyframes slide {
-  100% {
-    transform: translateX(0%);
   }
 }
