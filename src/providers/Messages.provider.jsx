@@ -1,10 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 
-import {
-  INITIAL_MESSAGES,
-  INITIAL_ACTIONS,
-  ABOUT_REPLIES,
-} from "./messageData";
+import { MESSAGES, ACTIONS } from "./messageData";
 
 export const MessagesContext = createContext({
   messages: [],
@@ -16,17 +12,10 @@ export const MessagesContext = createContext({
 });
 
 const MessagesProvider = ({ children }) => {
-  const [messages, setMessages] = useState(INITIAL_MESSAGES);
+  const [messages, setMessages] = useState(MESSAGES.intro);
   // eslint-disable-next-line no-unused-vars
-  const [actions, setActions] = useState(INITIAL_ACTIONS);
+  const [actions, setActions] = useState(ACTIONS);
   const [showActions, setShowActions] = useState(false);
-
-  useEffect(() => {
-    if (messages[messages.length - 1].sender === "user") {
-      setMessages((prevMessages) => [...prevMessages, ...ABOUT_REPLIES]);
-      toggleShowActions();
-    }
-  }, [messages]);
 
   const toggleLoaded = (messageId) => {
     setMessages((prevMessages) =>
