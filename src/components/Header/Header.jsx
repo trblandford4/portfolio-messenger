@@ -39,7 +39,13 @@ const Header = () => {
           </a>
         </Tooltip>
         <Tooltip placement="bottom" title="Download Resume">
-          <FontAwesomeIcon icon={faFileDownload} className="icon" />
+          <a
+            href={process.env.PUBLIC_URL + "/resume.pdf"}
+            download="Ray Blandford Resume"
+            aria-label="Download Resume"
+          >
+            <FontAwesomeIcon icon={faFileDownload} className="icon" />
+          </a>
         </Tooltip>
         <Tooltip placement="bottom" title="More Info">
           <FontAwesomeIcon

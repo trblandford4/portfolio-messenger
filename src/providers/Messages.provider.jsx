@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState } from "react";
 
 import { MESSAGES, ACTIONS } from "./messageData";
 
@@ -41,7 +41,6 @@ const MessagesProvider = ({ children }) => {
       sender: "user",
       type: "msg",
     };
-    console.log(sentMessage);
     setActiveMessages((prevMessages) => [
       ...prevMessages,
       sentMessage,

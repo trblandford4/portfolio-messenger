@@ -17,6 +17,7 @@ const Message = ({ message }) => {
     }, 1000 * delay + 1000);
 
     return () => clearTimeout(typingDelay);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

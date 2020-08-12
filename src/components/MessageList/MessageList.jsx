@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 
 import "./MessageList.styles.scss";
 
-import Message from "../Message/Message";
 import { MessagesContext } from "../../providers/Messages.provider";
 import ReplyAction from "../ReplyAction/ReplyAction";
 import ContactDrawer from "../ContactDrawer/ContactDrawer";
@@ -14,9 +13,7 @@ const MessageList = () => {
   const [visible, setVisible] = useState(false);
   const toggleVisible = () => setVisible((prevVisible) => !prevVisible);
 
-  const { activeMessages, toggleLoaded, actions, showActions } = useContext(
-    MessagesContext
-  );
+  const { activeMessages, actions, showActions } = useContext(MessagesContext);
 
   return (
     <div className="message-list">
@@ -26,9 +23,9 @@ const MessageList = () => {
       <AnimatedMessages messages={activeMessages} />
       {showActions && (
         <div className="reply-actions">
-          {actions.map((action) => (
+          {actions.map((action, idx) => (
             <ReplyAction
-              key={action.id}
+              key={idx}
               action={action}
               toggleContactDrawer={toggleVisible}
             />
