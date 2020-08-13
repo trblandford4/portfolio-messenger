@@ -12,8 +12,19 @@
 
   .icon {
     color: $fb-blue;
-    font-size: 28px;
-    margin: 0 24px 0 0;
+
+    font-size: 18px;
+    margin: 0 12px 0 0;
+
+    @include sm {
+      font-size: 24px;
+      margin: 0 18px 0 0;
+    }
+
+    @include lg {
+      font-size: 28px;
+      margin: 0 24px 0 0;
+    }
   }
 
   .avatar {
@@ -33,7 +44,11 @@
 
     .title {
       margin: 0 0 2px 0;
-      font-size: 16px;
+      font-size: 12px;
+
+      @include sm {
+        font-size: 18px;
+      }
 
       @include lg {
         font-size: 24px;
@@ -43,7 +58,11 @@
     .description {
       font-weight: normal;
       margin: 2px 0 0 0;
-      font-size: 10px;
+      font-size: 8px;
+
+      @include sm {
+        font-size: 10px;
+      }
 
       @include lg {
         font-size: 12px;
@@ -57,8 +76,13 @@
     .icon {
       cursor: pointer;
       color: $fb-blue;
-      font-size: 20px;
-      margin: 0 8px;
+      font-size: 14px;
+      margin: 0 4px;
+
+      @include sm {
+        font-size: 20px;
+        margin: 0 8px;
+      }
 
       @include lg {
         font-size: 24px;

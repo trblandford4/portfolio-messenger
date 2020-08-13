@@ -7,12 +7,13 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 
+import "./ContactForm.styles.scss";
+
 const ContactForm = ({ onFinish, onFinishFailed }) => {
   return (
     <Form
       name="basic"
       layout="vertical"
-      initialValues={{ remember: true }}
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
     >
@@ -21,10 +22,7 @@ const ContactForm = ({ onFinish, onFinishFailed }) => {
         name="name"
         rules={[{ required: true, message: "Please input your name!" }]}
       >
-        <Input
-          placeholder="Who am I speaking with?"
-          prefix={<FontAwesomeIcon icon={faUser} />}
-        />
+        <Input prefix={<FontAwesomeIcon icon={faUser} />} />
       </Form.Item>
 
       <Form.Item
@@ -39,10 +37,7 @@ const ContactForm = ({ onFinish, onFinishFailed }) => {
           { required: true, message: "Please input your email!" },
         ]}
       >
-        <Input
-          placeholder="Best email to get back to you at?"
-          prefix={<FontAwesomeIcon icon={faEnvelope} />}
-        />
+        <Input prefix={<FontAwesomeIcon icon={faEnvelope} />} />
       </Form.Item>
 
       <Form.Item
@@ -50,22 +45,21 @@ const ContactForm = ({ onFinish, onFinishFailed }) => {
         name="message"
         rules={[{ required: true, message: "Please input your message!" }]}
       >
-        <Input.TextArea
-          placeholder="How can I help you?"
-          autoSize={{ minRows: 3, maxRows: 6 }}
-          allowClear
-        />
+        <Input.TextArea autoSize={{ minRows: 3, maxRows: 5 }} allowClear />
       </Form.Item>
 
-      <Form.Item>
-        <Button
-          type="primary"
-          shape="circle"
-          htmlType="submit"
-          icon={<FontAwesomeIcon icon={faPaperPlane} />}
-          style={{ padding: "2.4px" }}
-        />
-      </Form.Item>
+      <div className="send-button">
+        <Form.Item>
+          <Button
+            type="primary"
+            size="large"
+            shape="circle"
+            htmlType="submit"
+            icon={<FontAwesomeIcon icon={faPaperPlane} />}
+            style={{ padding: "2.4px" }}
+          />
+        </Form.Item>
+      </div>
     </Form>
   );
 };
