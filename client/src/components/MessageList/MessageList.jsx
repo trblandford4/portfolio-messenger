@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { Spring } from "react-spring/renderprops";
 
 import "./MessageList.styles.scss";
 
@@ -15,6 +16,13 @@ const MessageList = () => {
 
   const { activeMessages, actions, showActions } = useContext(MessagesContext);
 
+  const appear = {
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: 200 },
+    delay: 1000,
+  };
+
   return (
     <div className="message-list">
       <div className="message-heading">
@@ -24,11 +32,17 @@ const MessageList = () => {
       {showActions && (
         <div className="reply-actions">
           {actions.map((action, idx) => (
-            <ReplyAction
-              key={idx}
-              action={action}
-              toggleContactDrawer={toggleVisible}
-            />
+            <Spring {...appear} key={idx}>
+              {(props) => (
+                <div style={props}>
+                  <ReplyAction
+                    key={idx}
+                    action={action}
+                    toggleContactDrawer={toggleVisible}
+                  />
+                </div>
+              )}
+            </Spring>
           ))}
         </div>
       )}
