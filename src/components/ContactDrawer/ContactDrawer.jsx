@@ -12,7 +12,7 @@ const ContactDrawer = ({ visible, toggleVisible }) => {
 
   const onFinish = (values) => {
     axios({
-      url: "contact",
+      url: "api/send-email",
       method: "post",
       data: values,
     })
