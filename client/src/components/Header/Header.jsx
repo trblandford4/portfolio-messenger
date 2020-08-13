@@ -19,7 +19,12 @@ const Header = () => {
 
   return (
     <div className="header">
-      <FontAwesomeIcon icon={faArrowLeft} className="icon" />
+      <Tooltip
+        placement="bottomLeft"
+        title="I'm just here to make the UI look better 💁‍♂️"
+      >
+        <FontAwesomeIcon icon={faArrowLeft} className="icon" />
+      </Tooltip>
       <Badge
         dot
         color="green"
