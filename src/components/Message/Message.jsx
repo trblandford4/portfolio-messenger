@@ -5,7 +5,7 @@ import MessageLoading from "../MessageLoading/MessageLoading";
 import { MessagesContext } from "../../providers/Messages.provider";
 import Avatar from "../Avatar/Avatar";
 
-const Message = ({ message }) => {
+const Message = ({ message, showAvatar }) => {
   const { text, loaded, sender, type, id, delay } = message;
   const { toggleLoaded } = useContext(MessagesContext);
 
@@ -22,11 +22,11 @@ const Message = ({ message }) => {
 
   return (
     <div className="message" style={{ animationDelay: `${delay}s` }}>
-      {sender !== "user" && <Avatar size={20} />}
+      {showAvatar && <Avatar size={20} />}
       <div
         className={`${sender === "user" ? "sent" : "received"} ${
           type === "action" ? "action-btn" : ""
-        } chat-bubble`}
+        } ${showAvatar ? "" : "no-avatar"} chat-bubble`}
       >
         {loaded ? text : <MessageLoading />}
       </div>

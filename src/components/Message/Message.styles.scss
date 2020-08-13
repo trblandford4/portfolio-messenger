@@ -48,6 +48,10 @@
 
     &.received {
       background-color: $received-message-background;
+
+      &.no-avatar {
+        margin-left: 20px;
+      }
     }
   }
 }

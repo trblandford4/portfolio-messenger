@@ -62,27 +62,6 @@ export const MESSAGES = {
     { id: 22, text: "CRWN Clothing", loaded: false, delay: 2 },
     { id: 23, text: "This site", loaded: false, delay: 3 },
   ],
-  interests: [
-    {
-      id: 30,
-      text:
-        "I love music and culture. I travel often to experience both -- well, not recently 😥",
-      loaded: false,
-      delay: 0,
-    },
-    {
-      id: 31,
-      text: "I dance often, go to the gym, and play pickup basketball.",
-      loaded: false,
-      delay: 1,
-    },
-    {
-      id: 32,
-      text: "How do i make these less lame >.<",
-      loaded: false,
-      delay: 2,
-    },
-  ],
 };
 
-export const ACTIONS = ["skills", "projects", "interests", "contact"];
+export const ACTIONS = ["skills", "projects", "contact"];

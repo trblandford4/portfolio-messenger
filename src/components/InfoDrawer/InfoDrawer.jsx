@@ -1,7 +1,7 @@
 import React from "react";
 import { Drawer } from "antd";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+
+import DetailsView from "../DetailsView/DetailsView";
 
 const InfoDrawer = ({ visible, toggleVisible }) => {
   return (
@@ -9,11 +9,11 @@ const InfoDrawer = ({ visible, toggleVisible }) => {
       key={"right"}
       placement="right"
       width="100vw"
+      closable={false}
       onClose={toggleVisible}
       visible={visible}
-      closeIcon={<FontAwesomeIcon icon={faArrowLeft} />}
     >
-      <p>Content</p>
+      <DetailsView toggleVisible={toggleVisible} />
     </Drawer>
   );
 };

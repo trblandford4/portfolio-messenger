@@ -1,0 +1,106 @@
+@import "../../styles/colors.scss";
+@import "../../styles/mixins.scss";
+
+@mixin icon-styles {
+  color: $fb-blue;
+  font-size: 24px;
+}
+
+.details-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+
+  .details-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 5%;
+
+    button {
+      cursor: pointer;
+      border: 0;
+      padding: 0;
+      background: inherit;
+    }
+
+    .header-icon {
+      @include icon-styles();
+    }
+  }
+
+  .avatar-and-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+
+    .avatar {
+      //   border: thin solid $divider;
+      box-shadow: 0 0s 6px rgba(0, 0, 0, 1);
+    }
+
+    .name {
+      font-weight: normal;
+      font-size: 32px;
+      padding-top: 12px;
+    }
+  }
+
+  .social-icon-group {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    padding: 12px 0;
+
+    @include lg {
+      width: 30%;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $fb-blue;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+
+      .icon {
+        font-size: 20px;
+        color: $light-font;
+      }
+
+      .social-icon {
+        font-size: 24px;
+        color: $light-font;
+      }
+    }
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 90%;
+    font-weight: normal;
+    color: $light-font;
+    padding-top: 24px;
+
+    h1 {
+      font-size: 12px;
+      font-weight: normal;
+      color: $timestamp-font;
+
+      @include lg {
+        font-size: 16px;
+      }
+    }
+
+    @include lg {
+      width: 50%;
+    }
+  }
+}

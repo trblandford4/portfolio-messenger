@@ -28,7 +28,7 @@ const AnimatedMessages = ({ messages }) => {
     >
       {(props) => (
         <div style={props}>
-          <Message message={message} />
+          <Message message={message} showAvatar={idx === messages.length - 1} />
         </div>
       )}
     </Spring>
