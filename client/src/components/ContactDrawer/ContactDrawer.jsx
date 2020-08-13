@@ -1,5 +1,6 @@
 import React from "react";
-import { Drawer } from "antd";
+import { Drawer, message } from "antd";
+import axios from "axios";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -8,6 +9,24 @@ import useWindowDimensions from "../useWindowDimensions/useWindowDimensions";
 
 const ContactDrawer = ({ visible, toggleVisible }) => {
   const { width } = useWindowDimensions();
+
+  const onFinish = (values) => {
+    axios({
+      url: "contact",
+      method: "post",
+      data: values,
+    })
+      .then((response) => {
+        message.success(
+          "Thanks for your message! I'll get back to you ASAP 😊"
+        );
+        toggleVisible();
+      })
+      .catch((error) => {
+        console.log("Contact error: ", error);
+        message.error("Uh oh, something went wrong. 😭");
+      });
+  };
 
   return (
     <Drawer
@@ -21,7 +40,7 @@ const ContactDrawer = ({ visible, toggleVisible }) => {
       visible={visible}
       key={"bottom"}
     >
-      <ContactForm />
+      <ContactForm onFinish={onFinish} />
     </Drawer>
   );
 };

@@ -9,14 +9,9 @@ import {
 
 import "./ContactForm.styles.scss";
 
-const ContactForm = ({ onFinish, onFinishFailed }) => {
+const ContactForm = ({ onFinish }) => {
   return (
-    <Form
-      name="basic"
-      layout="vertical"
-      onFinish={onFinish}
-      onFinishFailed={onFinishFailed}
-    >
+    <Form name="basic" layout="vertical" onFinish={onFinish}>
       <Form.Item
         label="Name"
         name="name"
