@@ -50,7 +50,7 @@ const DetailsView = ({ toggleVisible }) => {
         </a>
 
         <a
-          href="mailto:trblandford4@gmail.com"
+          href="mailto:hello@rayblandford.com"
           aria-label="Email Me"
           className="link"
         >

@@ -39,7 +39,7 @@ const Header = () => {
       </div>
       <div className="actions">
         <Tooltip placement="bottom" title="Email Me">
-          <a href="mailto:trblandford4@gmail.com" aria-label="Email Me">
+          <a h href="mailto:hello@rayblandford.com" aria-label="Email Me">
             <FontAwesomeIcon icon={faEnvelope} className="icon" />
           </a>
         </Tooltip>
