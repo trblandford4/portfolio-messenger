@@ -1,5 +1,5 @@
 import React from "react";
-import { message } from "antd";
+import { Tooltip } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowLeft,
@@ -20,9 +20,12 @@ const DetailsView = ({ toggleVisible }) => {
         <button onClick={toggleVisible}>
           <FontAwesomeIcon icon={faArrowLeft} className="header-icon" />
         </button>
-        <button onClick={() => message.success("gotcha 😜")}>
+        <Tooltip
+          title="I too, do nothing but enhance the UI 😜"
+          placement="bottomRight"
+        >
           <FontAwesomeIcon icon={faEllipsisV} className="header-icon" />
-        </button>
+        </Tooltip>
       </div>
       <div className="avatar-and-name">
         <Avatar className="avatar" size={150} />
@@ -85,7 +88,7 @@ const DetailsView = ({ toggleVisible }) => {
           >
             public preview!
           </a>{" "}
-          Most recently, I've been the technical cofounder of a startup focused
+          Most recently, I've been the technical co-founder of a startup focused
           on using Natural Language Processing to help qualitative researchers.
           Between these experiences, I've honed my ability to create and ship
           software that solves real problems for people.
@@ -94,10 +97,10 @@ const DetailsView = ({ toggleVisible }) => {
           I'm accepting new projects, so please reach out if you'd like to work
           together!
         </p>
-        <p>Here's what I can do for you:</p>
+        <h1>Here's what I can do for you:</h1>
         <ul>
           <li>Full Stack Application Development</li>
-          <li>Response Web Design</li>
+          <li>Responsive Web Design</li>
           <li>Web Performance & Accessibility Auditing</li>
           <li>Machine Learning, AI, and Data Science</li>
           <li>
@@ -105,7 +108,7 @@ const DetailsView = ({ toggleVisible }) => {
             solution design.
           </li>
         </ul>
-        <p>& these are the technologies I use frequently:</p>
+        <h1>These are the technologies I use frequently:</h1>
         <ul>
           <li>React / Redux</li>
           <li>JavaScript / TypeScript</li>

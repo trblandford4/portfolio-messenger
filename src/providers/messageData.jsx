@@ -148,7 +148,7 @@ export const MESSAGES = {
       text: (
         <span>
           3) Here's an e-commerce application built using React, Redux, Hooks,
-          GraphQL, ContextAPI, Stripe, and Firebase.
+          GraphQL, Context API, Stripe, and Firebase.
           <br />
           <a
             href="https://rayb-crwn-clothing.herokuapp.com/"
