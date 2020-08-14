@@ -42,7 +42,7 @@ export const MESSAGES = {
     {
       id: 4,
       text:
-        "I've built software at Microsoft, Appian, Visa, and most recently my own startup.",
+        "I've built software at Microsoft, Appian, Visa, and most recently as a Freelancer and startup co-founder.",
       loaded: false,
       delay: 4,
     },
@@ -104,8 +104,8 @@ export const MESSAGES = {
             <li>Project management and sharing</li>
             <li>Real-time notifications</li>
             <li>
-              An intuitive editor with word confidence, current word
-              highlighting, and audio playback controls
+              An intuitive editor with word confidence, speaker labels, current
+              word highlighting, and audio playback controls
             </li>
             <li>
               support for multiple audio file formats and natural languages
