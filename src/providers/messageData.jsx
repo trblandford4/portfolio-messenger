@@ -21,6 +21,9 @@ export const images = {
       alt: "CRWN Checkout Page",
     },
   ],
+  portfolio: [
+    { src: "https://i.imgur.com/tEugcFD.png", alt: "Lighthouse Score" },
+  ],
 };
 
 export const MESSAGES = {
@@ -164,8 +167,29 @@ export const MESSAGES = {
       loaded: false,
       delay: 5,
     },
+    { id: 26, type: "image", paths: images.portfolio, loaded: false, delay: 6 },
     {
-      id: 26,
+      id: 27,
+      text: (
+        <span>
+          4) This site! It's built with React, Hooks, and Context API. It has
+          serverless functions, automated deployments and a perfect score on
+          <a
+            href="https://developers.google.com/web/tools/lighthouse"
+            aria-label="Github link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Lighthouse!
+          </a>
+        </span>
+      ),
+      loaded: false,
+      delay: 7,
+    },
+    {
+      id: 28,
       text: (
         <span>
           I'm always working on new things, so check out my{" "}
@@ -185,7 +209,7 @@ export const MESSAGES = {
         </span>
       ),
       loaded: false,
-      delay: 6,
+      delay: 8,
     },
   ],
 };
