@@ -58,7 +58,9 @@ const DetailsView = ({ toggleVisible }) => {
         </a>
 
         <a
-          href={process.env.PUBLIC_URL + "/resume.pdf"}
+          href={
+            "https://docs.google.com/uc?export=download&id=1Eo6Bg3KoxwGtFUmjpnFyj2qEhui-eWWA"
+          }
           download="Ray Blandford Resume"
           aria-label="Download Resume"
           className="link"

@@ -1,3 +1,17 @@
+export const images = {
+  qualcat: [
+    { src: "https://i.imgur.com/mNVdd1E.png", alt: "Qualcat Dashboard" },
+    {
+      src: "https://i.imgur.com/Qs6xzdB.png",
+      alt: "Qualcat Projects with Notification",
+    },
+    {
+      src: "https://i.imgur.com/HqtFA50.png",
+      alt: "Qualcat Transcript Editor",
+    },
+  ],
+};
+
 export const MESSAGES = {
   intro: [
     { id: 0, text: "Hello there 👋", loaded: true, delay: 0 },
@@ -58,9 +72,8 @@ export const MESSAGES = {
   ],
   projects: [
     { id: 20, text: "Check these out:", loaded: false, delay: 0 },
-    { id: 21, text: "Qualcat", loaded: false, delay: 1 },
-    { id: 22, text: "CRWN Clothing", loaded: false, delay: 2 },
-    { id: 23, text: "This site", loaded: false, delay: 3 },
+    { id: 21, type: "image", paths: images.qualcat, loaded: false, delay: 1 },
+    { id: 22, text: "This is Qualcat", loaded: false, delay: 2 },
   ],
 };
 

@@ -45,7 +45,9 @@ const Header = () => {
         </Tooltip>
         <Tooltip placement="bottom" title="Download Resume">
           <a
-            href={process.env.PUBLIC_URL + "/resume.pdf"}
+            href={
+              "https://docs.google.com/uc?export=download&id=1Eo6Bg3KoxwGtFUmjpnFyj2qEhui-eWWA"
+            }
             download="Ray Blandford Resume"
             aria-label="Download Resume"
           >
