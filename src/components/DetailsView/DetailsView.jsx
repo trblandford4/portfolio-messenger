@@ -72,15 +72,40 @@ const DetailsView = ({ toggleVisible }) => {
       <div className="about">
         <h1>About Me</h1>
         <p>Hello! I'm Ray, a software engineer based in Washington, DC.</p>
+        <p>I enjoy learning about, building for, and playing on the Web.</p>
         <p>
-          I enjoy building web applications - front to back. blah blah blah blah
-          blah
+          Shortly after I graduated from Virginia Tech, I made my way to the
+          rainy city to work as a PM at Microsoft. I helped lead the vision on a
+          few internal programs for about a year, and then transfered to become
+          a Software Engineer where I helped take the product from early stages
+          to{" "}
+          <a
+            href="https://cloudblogs.microsoft.com/dynamics365/bdm/2019/10/02/announcing-microsoft-dynamics-365-product-insights-now-in-preview/"
+            alt="Announcing Microsoft Dynamics 365 Product Insights"
+          >
+            public preview!
+          </a>{" "}
+          Most recently, I've been the technical cofounder of a startup focused
+          on using Natural Language Processing to help qualitative researchers.
+          Between these experiences, I've honed my ability to create and ship
+          software that solves real problems for people.
         </p>
         <p>
-          Shortly after graduating from Virginia Tech, I became a PM then SDE at
-          Microsoft. I left to cofound a startup building blah blah blah
+          I'm accepting new projects, so please reach out if you'd like to work
+          together!
         </p>
-        <p>Here are the technologies I've used most recently:</p>
+        <p>Here's what I can do for you:</p>
+        <ul>
+          <li>Full Stack Application Development</li>
+          <li>Response Web Design</li>
+          <li>Web Performance & Accessibility Auditing</li>
+          <li>Machine Learning, AI, and Data Science</li>
+          <li>
+            & More. Send me your ask and we'll come up with a preliminary
+            solution design.
+          </li>
+        </ul>
+        <p>& these are the technologies I use frequently:</p>
         <ul>
           <li>React / Redux</li>
           <li>JavaScript / TypeScript</li>
