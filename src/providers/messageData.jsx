@@ -96,9 +96,9 @@ export const MESSAGES = {
       id: 22,
       text: (
         <span>
-          1) Qualcat is an application I built that helped shorten the time for
-          qualitative analyst get to meaningful insights from their audio data
-          by as much as 74%! It featured:
+          1) Qualcat is an application I built for qualitative analysts to gain
+          meaningful insights from raw audio data, which helped speed up their
+          process by as much as 74%! It featured:
           <ul>
             <li>Speech-to-text transcription</li>
             <li>Project management and sharing</li>
@@ -148,8 +148,8 @@ export const MESSAGES = {
           GraphQL, ContextAPI, Stripe, and Firebase.
           <br />
           <a
-            href="https://www.linkedin.com/pulse/plastic-free-oceans-2-hackathon-project-microsoft-ocean-wilkinson/"
-            aria-label="Latest info on the project"
+            href="https://rayb-crwn-clothing.herokuapp.com/"
+            aria-label="CRWN Clothing live app"
             target="_blank"
             rel="noopener noreferrer"
           >
