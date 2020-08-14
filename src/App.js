@@ -10,6 +10,7 @@ import Overlay from "./components/Overlay/Overlay";
 
 function App() {
   const { visible: overlayVisible } = useContext(OverlayContext);
+
   return (
     <div className="App">
       {overlayVisible && <Overlay />}
