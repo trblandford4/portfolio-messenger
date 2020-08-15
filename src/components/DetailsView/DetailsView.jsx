@@ -79,7 +79,7 @@ const DetailsView = ({ toggleVisible }) => {
         <p>
           Shortly after I graduated from Virginia Tech, I made my way to the
           rainy city to work as a PM at Microsoft. I helped lead the vision on a
-          few internal programs for about a year, and then transfered to become
+          few internal programs for about a year, and then transferred to become
           a Software Engineer where I helped take the product from early stages
           to{" "}
           <a
