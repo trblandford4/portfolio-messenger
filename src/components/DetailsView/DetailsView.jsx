@@ -1,5 +1,5 @@
 import React from "react";
-import { Tooltip } from "antd";
+import { message } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowLeft,
@@ -20,12 +20,9 @@ const DetailsView = ({ toggleVisible }) => {
         <button onClick={toggleVisible}>
           <FontAwesomeIcon icon={faArrowLeft} className="header-icon" />
         </button>
-        <Tooltip
-          title="I too, do nothing but enhance the UI 😜"
-          placement="bottomRight"
-        >
+        <button onClick={() => message.success("gotcha 😜")}>
           <FontAwesomeIcon icon={faEllipsisV} className="header-icon" />
-        </Tooltip>
+        </button>
       </div>
       <div className="avatar-and-name">
         <Avatar className="avatar" size={150} />

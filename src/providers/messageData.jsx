@@ -45,7 +45,7 @@ export const MESSAGES = {
     {
       id: 4,
       text:
-        "I've built software at Microsoft, Appian, Visa, and most recently as a Freelancer and startup co-founder.",
+        "I've built software at Microsoft, Appian, Visa, and most recently as a freelancer and startup co-founder.",
       loaded: false,
       delay: 4,
     },
