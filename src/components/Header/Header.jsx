@@ -46,7 +46,7 @@ const Header = () => {
         <Tooltip placement="bottom" title="Download Resume">
           <a
             href={
-              "https://docs.google.com/uc?export=download&id=1TSxuIVuXQwwOo5Xw6Hn8aONuofWIckIb"
+              "https://drive.google.com/file/d/1TSxuIVuXQwwOo5Xw6Hn8aONuofWIckIb/view?usp=sharing"
             }
             download="Ray Blandford Resume"
             aria-label="Download Resume"
